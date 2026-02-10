@@ -1,0 +1,15 @@
+<div class="energy-counter-view-container">
+  <!-- Chart Section -->
+  <div class="h-[400px] w-full" *ngIf="chartOptions">
+      <div #chartContainer class="w-full h-full"></div>
+  </div>
+
+  <!-- Table Section -->
+  <div class="table-container">
+  <div class="table-container">
+      <pplus-table
+        [gridOptions]="tableManager.gridOptions"
+        (gridReady)="tableManager.onGridReady($event)">
+      </pplus-table>
+  </div>
+</div>
